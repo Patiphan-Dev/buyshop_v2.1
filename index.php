@@ -10,13 +10,13 @@ require('idpass.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $result_info_web['web_title'] ?></title>
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/tung.css" rel="stylesheet">
-    <link href="assets/css/hover.css" rel="stylesheet">
+    <link href="https://patiphandeveloper.com/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://patiphandeveloper.com/assets/css/tung.css" rel="stylesheet">
+    <link href="https://patiphandeveloper.com/assets/css/hover.css" rel="stylesheet">
     <link href="bg.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="assets/img/web_logo2.png" />
-    <link rel="stylesheet" href="assets/css/owl/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/owl/owl.theme.default.min.css">
+    <link rel="icon" type="image/x-icon" href="https://patiphandeveloper.com/assets/img/web_logo2.png" />
+    <link rel="stylesheet" href="https://patiphandeveloper.com/assets/css/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://patiphandeveloper.com/assets/css/owl/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit:wght@200;300">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -31,9 +31,9 @@ require('idpass.php');
             /* background-blend-mode: overlay; */
             min-height: 100%;
             /* background-image: url("https://i.pinimg.com/originals/03/e4/0e/03e40e6f01981a4ba76b70f386106677.gif"), linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.0)); */
-            /* background-image: url("assets/img/bg3.jpg"), linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.0)); */
+            /* background-image: url("https://patiphandeveloper.com/assets/img/bg3.jpg"), linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.0)); */
             background-blend-mode: overlay;
-            /* background-image: url("assets/img/bg.jpg") rgba(255, 0, 150, 0.3); */
+            /* background-image: url("https://patiphandeveloper.com/assets/img/bg.jpg") rgba(255, 0, 150, 0.3); */
             background-position: center center !important;
             background-attachment: fixed !important;
             background-repeat: no-repeat !important;
@@ -258,25 +258,25 @@ require('idpass.php');
 
     </div>
 
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://patiphandeveloper.com/assets/js/bootstrap.bundle.min.js"></script>
     <?php
     if (
         @$_GET['game'] != "slot" &&
         @$_GET['game'] != "roller" &&
         @$_GET['game'] != "spin"
     ) {
-        echo '<script src="assets/js/jquery-3.4.1.min.js"></script>';
+        echo '<script src="https://patiphandeveloper.com/assets/js/jquery-3.4.1.min.js"></script>';
     }
     ?>
-    <!-- <script src="assets/js/jquery-3.4.1.min.js"></script> -->
+    <!-- <script src="https://patiphandeveloper.com/assets/js/jquery-3.4.1.min.js"></script> -->
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.js"></script>
 
-    <script src="assets/js/corgi.js"></script>
+    <script src="https://patiphandeveloper.com/assets/js/corgi.js"></script>
     <?php if (@$users_status == $admin_status) : ?>
-        <script src="assets/js/corgimain.js"></script>
+        <script src="https://patiphandeveloper.com/assets/js/corgimain.js"></script>
     <?php endif; ?>
 
-    <script src="assets/css/owl/owl.carousel.min.js"></script>
+    <script src="https://patiphandeveloper.com/assets/css/owl/owl.carousel.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script> -->

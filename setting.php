@@ -12,7 +12,7 @@
     define("CODE_KEY", "GGEZT6QKKHWH8");
 
 
-    define('LOCAL_WEB', 'http://localhost/buyshop_v2');
+    define('LOCAL_WEB', 'https://patiphandeveloper.com');
     // --------------- google api faekbook --------------
     // include 'src/Facebook/autoload.php'; // path to your autoload.php
     define('Facebook_appId', '3602133873380379');
@@ -39,8 +39,8 @@
     // --------------- encryp id pass in shop --------------
 
     $host = 'localhost';
-    $name = 'buyshop_v2';
-    $user = 'root';
+    $name = 'patiphan_buyshop';
+    $user = 'patiphan_buyshop';
     $pass = '';
 
     $admin_status = 7; //status admin db
