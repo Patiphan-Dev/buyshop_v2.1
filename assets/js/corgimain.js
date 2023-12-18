@@ -62,6 +62,7 @@ function updateweb() {
 		img: $('#img').val(),
 		name: $('#name').val(),
 		version: $('#version').val(),
+		keyapi: $('#keyapi').val(),
 		wallet: $('#wallet').val(),
 		fb: $('#fb').val(),
 		dc: $('#dc').val(),

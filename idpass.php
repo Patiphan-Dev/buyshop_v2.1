@@ -377,9 +377,12 @@ if(isset($_SESSION['username'])) {
 			// 'User-Agent: HMPRSLIPAPI',
 			);
 
+			$keyapi = $result_info_web['web_keyapi']; // key api
+
 			$data = array(
 				'id' => $product_id,
-				'keyapi' => 'xxxxxxx', //ใส่คีย์จาก buyshop
+				// 'keyapi' => 'xxxxxxx', //ใส่คีย์จาก buyshop
+				'keyapi' => $keyapi, //ใส่คีย์จาก buyshop
 				'username_customer' => $users_username
 			);
 

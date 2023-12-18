@@ -2,8 +2,8 @@
     require_once 'vendor/autoload.php';
     date_default_timezone_set("Asia/Bangkok");
 
-    define('SITE_KEY', '6Lcy3zQpAAAAAOdaarjlW8UFbO3f2FDqtiz8xlp1');
-    define('SECRET_KEY', '6Lcy3zQpAAAAAOdaarjlW8UFbO3f2FDqtiz8xlp1');
+    define('SITE_KEY', '6LdA5zQpAAAAALMjiMZBBuS9PVmZc2VGJiIU6E6N');
+    define('SECRET_KEY', '6LdA5zQpAAAAADEWUfQtq1tQw3tVRCLP6cyrbbB-');
 
     define('SECRET_WEB', 'GGEZ-T6QKKHWH8');
     define("ENCRYPTION_KEY", "GGEZ-T6QKKHWH8!@#$%^&*");

@@ -23,6 +23,10 @@
                     <label class="col-form-label" for="inputDefault"><i class="fa-solid fa-circle-info"></i> Version (เวอร์ชั่น)</label>
                     <input type="text" class="form-control" id="version" value="<?=$result_info_web['web_version']?>">
                 </div>
+                <div class="form-group col-md-4">
+                    <label class="col-form-label" for="inputDefault"><i class="fa-solid fa-key"></i> KEY API BYShop</label>
+                    <input type="text" class="form-control" id="keyapi" value="<?=$result_info_web['web_keyapi']?>">
+                </div>
             </div>
             <hr>
             <div class="form-group row">

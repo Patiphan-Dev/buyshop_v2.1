@@ -245,13 +245,14 @@ if (isset($_SESSION['username'])) {
         }
 
         if (isset($_GET['updateweb'])) {
-            if (empty($_POST['img']) || empty($_POST['name']) || empty($_POST['version']) || empty($_POST['wallet']) || empty($_POST['fb']) || empty($_POST['dc']) || empty($_POST['yt'])) {
+            if (empty($_POST['img']) || empty($_POST['name']) || empty($_POST['version']) || empty($_POST['keyapi']) || empty($_POST['wallet']) || empty($_POST['fb']) || empty($_POST['dc']) || empty($_POST['yt'])) {
                 DisplayMSG('error', 'Error', 'กรุณากรอกกรอกข้อมูลให้ครบ.', 'false');
             }
             $img = $connect->real_escape_string($_POST['img']);
             $name = $connect->real_escape_string($_POST['name']);
-            $version = $connect->real_escape_string($_POST['version']);
             $wallet = $connect->real_escape_string($_POST['wallet']);
+            $version = $connect->real_escape_string($_POST['version']);
+            $keyapi = $connect->real_escape_string($_POST['keyapi']);
             $fb = $connect->real_escape_string($_POST['fb']);
             $dc = $connect->real_escape_string($_POST['dc']);
             $yt = $connect->real_escape_string($_POST['yt']);
@@ -265,6 +266,7 @@ if (isset($_SESSION['username'])) {
             $query = $connect->query("UPDATE `tbl_setting` SET `web_img` = '" . $img . "', 
             `web_name` = '" . $name . "' , 
             `web_version` = '" . $version . "' , 
+            `web_keyapi` = '" . $keyapi . "' , 
             `web_wallet` = '" . $wallet . "' , 
             `web_discord` = '" . $dc . "' , 
             `web_youtube` = '" . $yt . "' , 
