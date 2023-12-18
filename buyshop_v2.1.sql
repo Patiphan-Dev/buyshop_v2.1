@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 07, 2023 at 11:54 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Host: localhost
+-- Generation Time: Dec 18, 2023 at 05:02 PM
+-- Server version: 10.6.15-MariaDB-cll-lve
+-- PHP Version: 8.1.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `buyshop_v2`
+-- Database: `patiphan_buyshop`
 --
 
 -- --------------------------------------------------------
@@ -33,7 +33,7 @@ CREATE TABLE `tbl_code_rewards` (
   `code` varchar(64) NOT NULL,
   `timeadd` int(11) NOT NULL,
   `status` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci ROW_FORMAT=DYNAMIC;
 
 -- --------------------------------------------------------
 
@@ -48,7 +48,7 @@ CREATE TABLE `tbl_game` (
   `img` varchar(255) NOT NULL,
   `platform` varchar(32) NOT NULL,
   `status` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci ROW_FORMAT=DYNAMIC;
 
 --
 -- Dumping data for table `tbl_game`
@@ -99,7 +99,7 @@ CREATE TABLE `tbl_history_rewards` (
   `timeadd` int(11) NOT NULL,
   `status` int(11) NOT NULL,
   `username` varchar(32) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci ROW_FORMAT=DYNAMIC;
 
 --
 -- Dumping data for table `tbl_history_rewards`
@@ -191,7 +191,8 @@ INSERT INTO `tbl_history_rewards` (`id`, `name`, `game`, `value`, `timeadd`, `st
 (107, 'บัตร Truemoney 50 บาท', 'spin', 'Gif Code หมดติดต่อ แอดมิน!!', 1699263874, 1, 'Patiphan Nw'),
 (108, 'บัตร Truemoney 50 บาท', 'spin', 'Gif Code หมดติดต่อ แอดมิน!!', 1699263884, 1, 'Patiphan Nw'),
 (109, 'ไม่ได้รับรางวัล', 'roller', 'ไม่ได้รับรางวัล', 1699263899, 1, 'Patiphan Nw'),
-(110, 'ไม่ได้รับรางวัล', 'slot', 'ไม่ได้รับรางวัล', 1699263911, 1, 'Patiphan Nw');
+(110, 'ไม่ได้รับรางวัล', 'slot', 'ไม่ได้รับรางวัล', 1699263911, 1, 'Patiphan Nw'),
+(111, 'บัตร Truemoney 50 บาท', 'spin', 'Gif Code หมดติดต่อ แอดมิน!!', 1702889501, 1, 'admin');
 
 -- --------------------------------------------------------
 
@@ -209,7 +210,7 @@ CREATE TABLE `tbl_item_rewards` (
   `percent` int(11) NOT NULL,
   `color` varchar(10) NOT NULL,
   `status` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci ROW_FORMAT=DYNAMIC;
 
 --
 -- Dumping data for table `tbl_item_rewards`
@@ -258,15 +259,16 @@ CREATE TABLE `tbl_setting` (
   `point_slot` varchar(7) NOT NULL,
   `web_color` varchar(255) NOT NULL,
   `menu_color` varchar(255) NOT NULL,
-  `web_title` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ROW_FORMAT=DYNAMIC;
+  `web_title` varchar(255) NOT NULL,
+  `web_keyapi` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci ROW_FORMAT=DYNAMIC;
 
 --
 -- Dumping data for table `tbl_setting`
 --
 
-INSERT INTO `tbl_setting` (`id`, `web_img`, `web_name`, `web_version`, `web_wallet`, `web_fb`, `web_discord`, `web_youtube`, `web_status`, `point_spin`, `point_roller`, `point_slot`, `web_color`, `menu_color`, `web_title`) VALUES
-(1, 'assets/img/Cyborg Logo Web1.png', 'CYBORG SHOP', '1.0.1', '0925728232', 'https://web.facebook.com/tptp.nw', 'https://web.facebook.com/tptp.nw', 'https://web.facebook.com/tptp.nw', 1, '10', '10', '10', '#000000', '#000000', 'CYBORG SHOP | จำหน่ายไอดีเกมส์ ยูทูปพรีเมี่ยม เน็ตฟิก');
+INSERT INTO `tbl_setting` (`id`, `web_img`, `web_name`, `web_version`, `web_wallet`, `web_fb`, `web_discord`, `web_youtube`, `web_status`, `point_spin`, `point_roller`, `point_slot`, `web_color`, `menu_color`, `web_title`, `web_keyapi`) VALUES
+(1, 'assets/img/Cyborg Logo Web1.png', 'CYBORG SHOP', '1.0.1', '0925728232', 'https://web.facebook.com/tptp.nw', 'https://web.facebook.com/tptp.nw', 'https://web.facebook.com/tptp.nw', 1, '10', '10', '10', '#000000', '#000000', 'CYBORG SHOP | จำหน่ายไอดีเกมส์ ยูทูปพรีเมี่ยม เน็ตฟิก', 'TdgbmZM9JI4BbxTdgbn3EKdJ');
 
 -- --------------------------------------------------------
 
@@ -282,7 +284,7 @@ CREATE TABLE `tbl_shop_history` (
   `username` varchar(32) NOT NULL,
   `gameid` int(11) NOT NULL,
   `status` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci ROW_FORMAT=DYNAMIC;
 
 --
 -- Dumping data for table `tbl_shop_history`
@@ -322,7 +324,7 @@ CREATE TABLE `tbl_shop_id` (
   `secret_info` longtext NOT NULL,
   `publish_info` longtext NOT NULL,
   `owner` varchar(32) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci ROW_FORMAT=DYNAMIC;
 
 --
 -- Dumping data for table `tbl_shop_id`
@@ -348,7 +350,7 @@ CREATE TABLE `tbl_shop_stock` (
   `account` longtext NOT NULL,
   `time` int(11) NOT NULL,
   `status` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci ROW_FORMAT=DYNAMIC;
 
 --
 -- Dumping data for table `tbl_shop_stock`
@@ -401,32 +403,32 @@ CREATE TABLE `tbl_shop_stock_api` (
 --
 
 INSERT INTO `tbl_shop_stock_api` (`id`, `product_id`, `name`, `price`, `price_web`, `img`, `stock`, `status`, `up`, `showitem`) VALUES
-(1, '1', 'Netflix 4K /30วัน (จอส่วนตัว)', '90.00', '120.00', 'https://byshop.me/api/img/app/netflix.png', '33', 'พร้อมส่ง', '', 1),
+(1, '1', 'Netflix 4K /30วัน (จอส่วนตัว)', '90.00', '120.00', 'https://byshop.me/api/img/app/netflix.png', '31', 'พร้อมส่ง', '', 1),
 (2, '2', 'Netflix 4K /7วัน (จอส่วนตัว)', '29.00', '35.00', 'https://byshop.me/api/img/app/netflix.png', '0', 'สินค้าหมด', '', 1),
-(3, '3', 'Netflix 4K /30วัน (จอแชร์)', '69.00', '89.00', 'https://byshop.me/api/img/app/netflix.png', '36', 'พร้อมส่ง', '', 1),
-(4, '4', 'Netflix 4K /7วัน (จอแชร์)', '15.00', '25.00', 'https://byshop.me/api/img/app/netflix.png', '3', 'พร้อมส่ง', '', 1),
-(5, '5', 'Disney+ /30วัน (จอส่วนตัว)', '79.00', '89.00', 'https://byshop.me/api/img/app/Disney.png', '7', 'พร้อมส่ง', '', 1),
-(6, '6', 'Youtube Premium/30วัน (เมลร้าน)', '10.00', '20.00', 'https://byshop.me/api/img/app/yt.png', '9', 'พร้อมส่ง', '', 1),
-(7, '7', 'Youtube Premium/30วัน (เมลตัวเอง)', '10.00', '29.00', 'https://byshop.me/api/img/app/yt.png', '52', 'พร้อมส่ง', '', 1),
+(3, '3', 'Netflix 4K /30วัน (จอแชร์)', '69.00', '89.00', 'https://byshop.me/api/img/app/netflix.png', '50', 'พร้อมส่ง', '', 1),
+(4, '4', 'Netflix 4K /7วัน (จอแชร์)', '15.00', '25.00', 'https://byshop.me/api/img/app/netflix.png', '0', 'สินค้าหมด', '', 1),
+(5, '5', 'Disney+ /30วัน (จอส่วนตัว)', '79.00', '89.00', 'https://byshop.me/api/img/app/Disney.png', '0', 'สินค้าหมด', '', 1),
+(6, '6', 'Youtube Premium/30วัน (เมลร้าน)', '10.00', '20.00', 'https://byshop.me/api/img/app/yt.png', '0', 'สินค้าหมด', '', 1),
+(7, '7', 'Youtube Premium/30วัน (เมลตัวเอง)', '10.00', '29.00', 'https://byshop.me/api/img/app/yt.png', '0', 'สินค้าหมด', '', 1),
 (8, '8', 'Youtube Premium/1ปี (เมลตัวเอง)', '450.00', '590.00', 'https://byshop.me/api/img/app/yt.png', '0', 'สินค้าหมด', '', 1),
-(9, '9', 'MONOMAX/30วัน (จอส่วนตัว)', '35.00', '49.00', 'https://byshop.me/api/img/app/monomax.png', '9', 'พร้อมส่ง', '', 1),
+(9, '9', 'MONOMAX/30วัน (จอส่วนตัว)', '35.00', '49.00', 'https://byshop.me/api/img/app/monomax.png', '1', 'พร้อมส่ง', '', 1),
 (10, '10', 'MONOMAX/30วัน (จอแชร์)', '25.00', '39.00', 'https://byshop.me/api/img/app/monomax.png', '11', 'พร้อมส่ง', '', 1),
-(11, '11', 'HBO GO/30วัน', '45.00', '59.00', 'https://byshop.me/api/img/app/hbo.png', '8', 'พร้อมส่ง', '', 1),
-(12, '12', 'VIU Premium/30วัน (หาร3)', '10.00', '29.00', 'https://byshop.me/api/img/app/viu.png', '27', 'พร้อมส่ง', '', 1),
-(13, '13', 'iQIYI GOLD /30วัน', '22.00', '29.00', 'https://byshop.me/api/img/app/iq.png', '33', 'พร้อมส่ง', '', 1),
-(14, '14', 'WeTV VIP /30วัน', '20.00', '29.00', 'https://byshop.me/api/img/app/wetv.png', '28', 'พร้อมส่ง', '', 1),
+(11, '11', 'HBO GO/30วัน', '45.00', '59.00', 'https://byshop.me/api/img/app/hbo.png', '0', 'สินค้าหมด', '', 1),
+(12, '12', 'VIU Premium/30วัน (หาร3)', '15.00', '29.00', 'https://byshop.me/api/img/app/viu.png', '12', 'พร้อมส่ง', '', 1),
+(13, '13', 'iQIYI GOLD /30วัน', '22.00', '29.00', 'https://byshop.me/api/img/app/iq.png', '8', 'พร้อมส่ง', '', 1),
+(14, '14', 'WeTV VIP /30วัน', '20.00', '29.00', 'https://byshop.me/api/img/app/wetv.png', '4', 'พร้อมส่ง', '', 1),
 (15, '15', 'Amazon Prime Video/30วัน', '45.00', '59.00', 'https://byshop.me/api/img/app/pv.png', '0', 'สินค้าหมด', '', 1),
 (16, '16', 'Amazon Prime Video/7วัน', '10.00', '19.00', 'https://byshop.me/api/img/app/pv.png', '15', 'พร้อมส่ง', '', 1),
 (17, '17', 'Spotify Premium/30วัน(เมลร้าน)', '10.00', '29.00', 'https://byshop.me/api/img/app/sf.png', '0', 'สินค้าหมด', '', 1),
 (18, '18', 'TrueID+ /30วัน', '25.00', '29.00', 'https://byshop.me/api/img/app/trueid+.png', '0', 'สินค้าหมด', '', 1),
 (19, '19', 'AIS Play Premium /30วัน', '10.00', '29.00', 'https://byshop.me/api/img/app/ais.png', '0', 'สินค้าหมด', '', 1),
-(20, '20', 'Bilibili /30วัน', '25.00', '29.00', 'https://byshop.me/api/img/app/bb.png', '24', 'พร้อมส่ง', '', 1),
+(20, '20', 'Bilibili /30วัน', '25.00', '29.00', 'https://byshop.me/api/img/app/bb.png', '2', 'พร้อมส่ง', '', 1),
 (21, '21', 'Netflix 4K /1วัน (จอส่วนตัว)', '7.00', '10.00', 'https://byshop.me/api/img/app/netflix.png', '0', 'สินค้าหมด', '', 1),
-(22, '22', 'Netflix 4K /1วัน (จอแชร์)', '5.00', '7.00', 'https://byshop.me/api/img/app/netflix.png', '5', 'พร้อมส่ง', '', 1),
-(23, '23', 'Netflix 4K /30วัน (TV) (จอส่วนตัว)', '159.00', '179.00', 'https://byshop.me/api/img/app/netflix.png', '21', 'พร้อมส่ง', '', 1),
-(24, '24', 'VIU Premium/30วัน (หาร4)', '29.00', '29.00', 'https://byshop.me/api/img/app/viu.png', '16', 'พร้อมส่ง', '', 1),
-(25, '25', 'BeinSports /30วัน', '49.00', '29.00', 'https://byshop.me/api/img/app/bs.png', '2', 'พร้อมส่ง', '', 1),
-(26, '26', 'CH3 Plus /30วัน', '39.00', '29.00', 'https://byshop.me/api/img/app/ch3.png', '8', 'พร้อมส่ง', '', 1);
+(22, '22', 'Netflix 4K /1วัน (จอแชร์)', '5.00', '7.00', 'https://byshop.me/api/img/app/netflix.png', '0', 'สินค้าหมด', '', 1),
+(23, '23', 'Netflix 4K /30วัน (TV) (จอส่วนตัว)', '159.00', '179.00', 'https://byshop.me/api/img/app/netflix.png', '8', 'พร้อมส่ง', '', 1),
+(24, '24', 'VIU Premium/30วัน (หาร4)', '29.00', '29.00', 'https://byshop.me/api/img/app/viu.png', '0', 'สินค้าหมด', '', 1),
+(25, '25', 'BeinSports /30วัน', '49.00', '29.00', 'https://byshop.me/api/img/app/bs.png', '0', 'สินค้าหมด', '', 1),
+(26, '26', 'CH3 Plus /30วัน', '39.00', '29.00', 'https://byshop.me/api/img/app/ch3.png', '5', 'พร้อมส่ง', '', 1);
 
 -- --------------------------------------------------------
 
@@ -466,7 +468,7 @@ CREATE TABLE `tbl_topup` (
   `point` varchar(7) NOT NULL,
   `status` int(11) NOT NULL,
   `username` varchar(32) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci ROW_FORMAT=DYNAMIC;
 
 -- --------------------------------------------------------
 
@@ -483,7 +485,7 @@ CREATE TABLE `tbl_users` (
   `point` varchar(7) NOT NULL,
   `ip` varchar(32) NOT NULL,
   `status` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci ROW_FORMAT=DYNAMIC;
 
 --
 -- Dumping data for table `tbl_users`
@@ -492,8 +494,9 @@ CREATE TABLE `tbl_users` (
 INSERT INTO `tbl_users` (`id`, `img`, `username`, `password`, `email`, `point`, `ip`, `status`) VALUES
 (1, 'https://lh3.googleusercontent.com/a/ACg8ocKxXIh5RhQ-08TVdKcPD9CvtZK6wT8PnXp6L33oyO5HPA=s96-c', 'patiphan', '108658380967055078189', 'patiphan.dev@gmail.com', '736', '::1', 7),
 (2, 'https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=6840360772746850&height=50&width=50&ext=1701432785&hash=AeSCUx0sqwfpPVotMSc', 'Patiphan Nw', '6840360772746850', 'patiphan1998.fb@gmail.com', '782', '::1', 7),
-(3, 'assets/img/anya.jpg', 'user1', 'fb45aaf7dedea9aef8a851a00b358f89', 'user1@gmail.com', '754', '49.229.180.242', 1),
-(4, 'assets/img/anya.jpg', 'admin', 'fb45aaf7dedea9aef8a851a00b358f89', 'admin@gmail.com', '784', '::1', 7);
+(3, 'assets/img/anya.jpg', 'user1', 'fb45aaf7dedea9aef8a851a00b358f89', 'user1@gmail.com', '754', '180.128.2.25', 1),
+(4, 'assets/img/anya.jpg', 'admin', 'fb45aaf7dedea9aef8a851a00b358f89', 'admin@gmail.com', '774', '184.82.30.109', 7),
+(5, 'assets/img/anya.jpg', 'buyshop', 'fb45aaf7dedea9aef8a851a00b358f89', 'buyshop@gmail.com', '0', '180.128.2.25', 1);
 
 --
 -- Indexes for dumped tables
@@ -603,7 +606,7 @@ ALTER TABLE `tbl_history_api`
 -- AUTO_INCREMENT for table `tbl_history_rewards`
 --
 ALTER TABLE `tbl_history_rewards`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
 
 --
 -- AUTO_INCREMENT for table `tbl_item_rewards`
@@ -657,7 +660,7 @@ ALTER TABLE `tbl_topup`
 -- AUTO_INCREMENT for table `tbl_users`
 --
 ALTER TABLE `tbl_users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
