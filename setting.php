@@ -38,7 +38,7 @@
     $decryption_key = CODE_KEY;
     // --------------- encryp id pass in shop --------------
 
-    $host = 'localhost';
+    $host = 'da89.hostneverdie.com';
     $name = 'patiphan_buyshop';
     $user = 'patiphan_buyshop';
     $pass = 't9,dT58u|h3N';

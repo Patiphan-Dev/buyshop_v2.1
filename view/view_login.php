@@ -33,12 +33,11 @@
             <div class="form-group mb-2">
                 <a href="<?=$client->createAuthUrl()?>" class="btn btn-light w-100"><i class="fa-brands fa-google-plus-g"></i> Google Login</a>
             </div>
-            <div class="form-group mb-2">
+            <!-- <div class="form-group mb-2">
                 <div id="fb-root"></div>
                 <button onclick="fb_login();waitload();" class="btn btn-primary w-100"><i class="fa-brands fa-facebook"></i> Facebook Login</button>
-            </div>
-            
-
+            </div> -->
+        
         </div>
     </div>
     
