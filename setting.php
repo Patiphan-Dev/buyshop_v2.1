@@ -2,8 +2,8 @@
     require_once 'vendor/autoload.php';
     date_default_timezone_set("Asia/Bangkok");
 
-    define('SITE_KEY', '6LdE6LgoAAAAAEog2nwqqw5D_BUAko0rVswHBsQP');
-    define('SECRET_KEY', '6LdE6LgoAAAAAGDHLYvuZOAUQgTO18ibo6Zv2WDI');
+    define('SITE_KEY', '6Lcy3zQpAAAAAOdaarjlW8UFbO3f2FDqtiz8xlp1');
+    define('SECRET_KEY', '6Lcy3zQpAAAAAOdaarjlW8UFbO3f2FDqtiz8xlp1');
 
     define('SECRET_WEB', 'GGEZ-T6QKKHWH8');
     define("ENCRYPTION_KEY", "GGEZ-T6QKKHWH8!@#$%^&*");
@@ -38,10 +38,10 @@
     $decryption_key = CODE_KEY;
     // --------------- encryp id pass in shop --------------
 
-    $host = 'localhost';
+    $host = 'da89.hostneverdie.com';
     $name = 'patiphan_buyshop';
     $user = 'patiphan_buyshop';
-    $pass = '';
+    $pass = 't9,dT58u|h3N';
 
     $admin_status = 7; //status admin db
     $vip_status = 5; //status vip db
